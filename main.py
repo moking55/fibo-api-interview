@@ -19,3 +19,20 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/api/v1/fibo/{number}", response_model=dict,description="Calculate fibonacci sequence")
+async def fibo(number: int):
+    if number < 0:
+        raise HTTPException(status_code=400, detail="Number must be positive")
+    if number > 100 or number == 0:
+        raise HTTPException(status_code=400, detail="Number must be between 1 and 100")
+    
+    fibo_list = [0, 1]
+    for i in range(2, number):
+        fibo_list.append(fibo_list[i - 1] + fibo_list[i - 2])
+    
+    return JSONResponse(status_code=200, content={
+        "member-count": len(fibo_list),
+        "sequence": fibo_list,
+        "total": sum(fibo_list),
+    })
