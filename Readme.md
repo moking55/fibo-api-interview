@@ -1,5 +1,5 @@
 # Fibonacci API
-Repo นี้เป็นส่วนหนึ่งของแบบทดสอบ Backend Developer ของบริษัท บริษัท ดูดี อินดีดี จำกัด โดย API ใช้ FastAPI สำหรับการคำนวณลำดับ Fibonacci
+Repo นี้เป็นส่วนหนึ่งของแบบทดสอบ Backend Developer ของบริษัท บริษัท ดูดีอินดีด คอร์ปอเรชั่น จำกัด โดย API ใช้ FastAPI สำหรับการคำนวณลำดับ Fibonacci
 
 # ฟีเจอร์
 - สามารถคำนวณลำดับ Fibonacci ได้
